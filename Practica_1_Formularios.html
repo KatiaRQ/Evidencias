@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formularios</title>
+	<style type="">
+		body{
+			background: rgb(14,31,83);
+			background: linear-gradient(0deg, rgba(14,31,83,1) 0%, rgba(205,205,205,1) 100%);
+			padding: 5%;
+			font-family: cambria;
+		}
+		table{
+			width: 80%;
+			margin: auto;
+		}
+		h1{
+			text-align: center;
+			color: #0e1f53;
+			font-size: 70px;
+		}
+		h2{
+			text-align: center;
+			color: #0e1f53;
+			font-size: 50px;
+		}
+		h3{
+			text-align: right;
+			color: #cdcdcd;
+		}
+		legend{
+			font-size: 30px;
+			color: #0e1f53;
+			font-weight: bold;
+		}
+		label{
+			font-size: 18px;
+			color: #cdcdcd;
+			font-weight: bold;
+		}
+		input{
+			font-size: 18px;
+		}
+		select{
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Volkswagen Potosina</h1>
+	<h2>Compras online</h2>
+
+	<form action="" method="post" enctype="text/plain">
+		<fieldset>
+			<legend>Información general del cliente</legend>
+			
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<label for="nombre">Nombre:</label>
+							<input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+						</td>
+						<td>
+							<label for="a_paterno">Apellido Paterno</label><br/>
+							<input type="text" name="a_paterno" id="a_paterno" placeholder="Apellido Paterno">
+						</td>
+						<td>
+							<label for="a_materno">Apellido Materno</label><br/>
+							<input type="text" name="a_materno" id="a_materno" placeholder="Apellido Materno">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="user">Nombre de usuario</label><br/>
+							<input type="text" name="user" id="user" placeholder="Usuario" required>
+						</td>
+						<td>
+							<label for="pass">Password</label>
+							<input type="Password" name="pass" id="pass" placeholder="Password" required>
+						</td>
+						<td>
+							<label for="fecharegistro">Fecha de registro</label>
+							<input type="date" name="fecharegistro" id="fecharegistro">
+						</td>
+					</tr>
+				</tbody>
+			</table>			
+		</fieldset>
+		<fieldset>
+			<legend>Datos para facturar</legend>
+
+			<table>
+				<tbody>
+					<tr>
+						<td><label>País</label><br/>
+							<select name="pais" size="3">
+								<option value="mexico">México</option>
+								<option value="canada">Canadá</option>
+								<option value="reinounido">Reino Unido</option>
+							</select>
+						</td>
+						<td><label>Ciudad</label><br/>
+							<select name="ciudad" size="3">
+								<option value="slp">San Luis Potosí</option>
+								<option value="mty">Monterrey</option>
+								<option value="cdvalles">Cd. Valles</option>
+							</select>
+						</td>
+						<td>
+							<label for="calle">Calle</label><br/>
+							<input type="text" name="calle" id="calle" placeholder="Calle">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="numcasa">Número de casa</label><br/>
+							<input type="text" name="numcasa" id="numcasa" placeholder="Número exterior">
+						</td>
+						<td>
+							<label for="colonia">Colonia</label><br/>
+							<input type="text" name="colonia" id="colonia" placeholder="Colonia">
+						</td>
+						<td>
+							<label for="email">E-mail</label><br/>
+							<input type="email" name="email" id="email" placeholder="E-mail" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="rfc">R.F.C.</label><br/>
+							<input type="text" name="rfc" id="rfc" placeholder="R.F.C." required>
+						</td>
+						<td>
+							<label for="cp">C.P.</label><br/>
+							<input type="text" name="cp" id="cp" placeholder="Código Postal">
+						</td>
+						<td>
+							<input type="checkbox" name="terminos" id="terminos" value="1" checked>
+							<label for="terminos">Acepto términos y condiciones</label><br/>
+							<input type="submit" name="enviar" id="enviar" value="Enviar">
+							<input type="submit" name="restablecer" id="restabecer" value="Restablecer">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+	</form>
+	<h3>Febrero 2025, S.L.P.</h3>
+</body>
+</html>
