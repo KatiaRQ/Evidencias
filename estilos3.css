@@ -1,0 +1,48 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+	font-family: "Playfair Display", serif;
+	font-optical-sizing: auto;
+	font-weight: 450;
+	font-style: normal;
+}
+ul{
+	list-style-type: none;
+	width: 20%;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	background-color: #eae0c8;
+	position: fixed;
+	overflow: auto;
+}
+li a{
+	display: block;
+	background-color: #eae0c8;
+	padding: 12px;
+	text-decoration: none;
+	color: #536878;
+}
+li a:hover{
+	background-color: #536878;
+	color: #eae0c8;
+}
+li a.activo{
+	background-color: #536878;
+	color: #eae0c8;
+}
+.capa1{
+	margin-left: 21%;
+	width: 78%;
+	padding: 20px;
+}
+.capa1 p{
+	text-align: justify;
+	font-family: 'fuente1';
+}
+@font-face{
+	font-family: "fuente1";
+	src: url("Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+}
