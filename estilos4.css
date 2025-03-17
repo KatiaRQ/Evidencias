@@ -1,0 +1,83 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	/*background-color: #000000;*/
+}
+ul{
+	list-style-type: none;
+	width: 15%;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	background-color: #FFFF00;
+	position: fixed;
+	overflow: auto;
+}
+li a{
+	display: block;
+	background-color: #FFFF00;
+	padding: 20px;
+	text-decoration: none;
+	color: #00A8FF;
+	font-size: 20px;
+	font-family: "Playfair Display", serif;
+	font-weight: 800;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+li a:hover{
+	background-color: #00A8FF;
+	color: #FFFF00;
+}
+li a.activo{
+	background-color: #00A8FF;
+	color: #FFFF00;
+}
+#capa1{
+	width: 85%;
+	margin-left: 15%;
+	text-align: justify;
+	padding: 3%;
+	background-color: #000000;
+}
+#capa1 img{
+	width: 20%;
+	margin-right: 2%;
+	margin-top: 2%;
+}
+#capa1 h1{
+	text-align: center;
+	color: #00A8FF;
+	font-family: "Pacifico", cursive;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 40px;
+}
+#capa1 p{
+	color: #00A8FF;
+	margin-top: 2%;
+	font-size: 20px;
+	font-family: "Playfair Display", serif;
+	font-weight: 400;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+footer{
+	background-color: black;
+	width: 85%;
+	margin-left: 15%;
+	height: auto;
+	padding: 3%;
+}
+footer p{
+	color: #00A8FF;
+	font-size: 12px;
+	font-family: "Playfair Display", serif;
+	font-weight: 400;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+hr{
+	border-color: #FFFF00;
+}
