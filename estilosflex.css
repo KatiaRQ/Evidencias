@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.contenedor{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+.encabezado{
+	padding: 3%;
+	background: #6d00a1;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+}
+.contenido{
+	display: flex;
+	flex-direction: space-between;
+	flex: 1;
+}
+.caja{
+	border: 1px solid black;
+	margin: 15px;
+	padding: 20px;
+	flex: 1;
+	box-shadow: 5px 5px #4b0081;
+}
+.pie{
+	padding: 15px;
+	background: #6d00a1;
+	color: white;
+	text-align: center;
+	font-size: 20px;	
+}
+@media(max-width: 500px){
+	.contenido{
+		flex-direction: column;
+	}
+}
