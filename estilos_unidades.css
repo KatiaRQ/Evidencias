@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a87bc7;
+    margin: 0;
+    padding: 20px;
+}
+
+#contenedor {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border: 5px solid #734a91;
+}
+
+h1 {
+    color: #734a91;
+    text-align: center;
+    font-size: 24px;
+}
+
+h2 {
+    color: #734a91;
+    font-size: 20px;
+    margin-top: 30px;
+    border-bottom: 2px solid #734a91;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f1d7ff;
+}
+
+/* Estilos para los cuadros */
+.cuadro {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: rebeccapurple;
+    color: #ffffff;
+    text-align: center;
+    border: 5px solid #ffffff;
+}
+
+/* Unidades absolutas */
+.centimetro{
+    width: 1cm;
+    height: 1cm;
+}
+.milimetro{
+    width: 10mm;
+    height: 10mm;
+}
+.pulgada{
+    width: 0.5in;
+    height: 0.5in;
+}
+.pixel{
+    width: 40px;
+    height: 40px;
+}
+.punto{
+    width: 30pt;
+    height: 30pt;
+}
+.pica{
+    width: 2pc;
+    height: 2pc;
+}
+
+/* Unidades relativas */
+.em{
+    width: 2em;
+    height: 2em;
+    font-size: 16px;
+}
+.rem{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.porcentaje{
+    width: 50%;
+    height: 30px;
+}
+.vw{
+    width: 10vw;
+    height: 20px;
+}
+.vh{
+    width: 50px;
+    height: 10vh;
+}
+.vmin{
+    width: 10vmin;
+    height: 10vmin;
+}
+.vmax{
+    width: 10vmax;
+    height: 10vmax;
+}
+
+.texto {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px;
+    background-color: rebeccapurple;
+    border: 5px solid #ffffff;
+    color: #ffffff;
+}
+.ch{
+    width: 20ch;
+}
+.ex{
+    font-size: 3ex;
+}
