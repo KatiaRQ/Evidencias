@@ -1,0 +1,261 @@
+/*Selector universal*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Candara;
+}
+
+/*Body*/
+body{
+	width: 100%;
+	height: 100vh;
+}
+
+/*Header*/
+header{
+	z-index: 200;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.45rem 2rem 0.45rem 1.27rem;
+	position: fixed;
+	background-color: #DFD3C3;
+	top: 0;
+	left: 0;
+}
+
+/*Sección izquierda*/
+.izquierda{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.4rem;	/*Separación de los elementos internos*/
+}
+
+/*Menú*/
+.menu-contenedor{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.menu{
+	width: 1.5rem;
+	height: 37%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.menu div{
+	width: 100%;
+	height: 0.15rem;
+	background-color: #853726;
+	transition: all 0.1s ease;
+}
+
+.menu.menu-toggle div:first-child{
+	width: 40%;
+	transform: rotate(-35deg) translate(-10%,120%);
+}
+
+.menu.menu-toggle div:last-child{
+	width: 40%;
+	transform: rotate(35deg) translate(-10%,-100%);
+}
+
+/*Marca*/
+.marca{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.6rem;	/*Separación de los elementos internos*/
+}
+
+.marca .logo{
+	width: 1.7rem;
+}
+
+.marca .name{
+	font-size: 1.5rem;
+	font-weight: 900;
+	color: #853726;
+}
+
+/*Sección derecha*/
+.derecha{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;	/*Separación de los elementos internos*/
+}
+
+.derecha a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.5rem;
+	transition: background-color 0.2s ease;	/*Transición para el hover*/
+}
+
+.derecha a:hover{
+	background-color: gray;
+}
+
+.derecha img{
+	width: 1.5rem;
+	margin: 0.5rem;
+}
+
+/*Barra lateral*/
+.barra_lateral{
+	margin-top: 3rem;
+	width: 4rem;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	padding: 1.1rem 0;
+	overflow-y: auto;
+	background-color: #DFD3C3;
+	transition: width 0.5s ease;
+}
+
+.barra_lateral.menu-toggle{
+	width: 18.75rem;
+}
+
+.barra_lateral a{
+	display: flex;
+	align-items: center;
+	gap: 1.3rem;
+	padding: 0.9rem 0.7rem;
+	text-decoration: none;
+	margin: 0 0.5rem;
+	border-radius: 0.5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #853726;
+}
+
+.barra_lateral a:hover{
+	background-color: #C7B9A6;
+}
+
+.barra_lateral a.selected{
+	background-color: #853726;
+	color: #DFD3C3;
+}
+
+.barra_lateral a.buscar{
+	padding: 1rem 0.7rem;
+	margin-bottom: 0.2rem;
+}
+
+.barra_lateral img{
+	width: 1.6rem;
+}
+
+/*Main*/
+#main{
+	margin-top: 3.4rem;
+	margin-left: 4rem;
+	padding: 2rem;
+	transition: padding-left 0.5s ease;
+}
+
+#main.menu-toggle{
+	transition: margin-left 0.5s ease;
+	margin-left: 18.75rem;
+}
+
+/*Responsive*/
+
+@media (max-width: 764px) and (min-width: 617px){
+	.barra_lateral{
+		margin-top: 4.5rem;
+	}
+	#main{
+		margin-top: 5.1rem;
+	}
+	.menu.menu-toggle div:first-child{
+		transform: rotate(-35deg) translate(-85%, 230%);
+	}
+	.menu.menu-toggle div:last-child{
+		transform: rotate(35deg) translate(-85%,-250%);	
+	}
+}
+
+@media (max-width: 616px) and (min-width: 501px){
+	.barra_lateral{
+		margin-top: 6.5rem;
+	}
+	#main{
+		margin-top: 7.3rem;
+	}
+	.menu.menu-toggle div:first-child{
+		transform: rotate(-35deg) translate(-100%, 470%);
+	}
+	.menu.menu-toggle div:last-child{
+		transform: rotate(35deg) translate(-100%,-490%);	
+	}
+}
+
+@media (max-width: 500px) and (min-width: 380px){
+	.derecha .icons-header{
+		display: none;
+	}
+	.barra_lateral{
+		width: 0;
+		margin-top: 4.5rem;
+	}
+	#main{
+		margin-left: 0;
+		margin-top: 5.1rem;
+	}
+	#main.menu-toggle{
+		margin-left: 0;
+	}
+	.menu.menu-toggle div:first-child{
+		width: 100%;
+		transform: rotate(-45deg) translate(-0.5rem,0.5rem);
+	}
+	.menu.menu-toggle div:nth-child(2){
+		opacity: 0;
+	}
+	.menu.menu-toggle div:last-child{
+		width: 100%;
+		transform: rotate(45deg) translate(-0.5rem,-0.5rem);
+	}
+}
+
+@media (max-width: 379px) and (min-width: 0px){
+	.derecha .icons-header{
+		display: none;
+	}
+	.barra_lateral{
+		width: 0;
+		margin-top: 7rem;
+	}
+	#main{
+		margin-left: 0;
+		margin-top: 7.3rem;
+	}
+	#main.menu-toggle{
+		margin-left: 0;
+	}
+	.menu.menu-toggle div:first-child{
+		width: 100%;
+		transform: rotate(-45deg) translate(-0.75rem,0.75rem);
+	}
+	.menu.menu-toggle div:nth-child(2){
+		opacity: 0;
+	}
+	.menu.menu-toggle div:last-child{
+		width: 100%;
+		transform: rotate(45deg) translate(-0.75rem,-0.75rem);
+	}
+}
