@@ -2,82 +2,38 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1 viewport-fit=cover">
-	<title>Inicio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Responsive Navbar</title>
 	<link rel="stylesheet" type="text/css" href="index_proyecto.css">
 </head>
 <body>
-	<header>
-		<div class="izquierda">
-			<div class="menu-contenedor">
-				<div class="menu" id="menu">
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
-			</div>
-			<div class="marca">
-				<img src="imagenes/Logo.png" alt="Logo" class="logo">
-				<span class="name">Cocina Económica Doña Mary</span>
-			</div>
-		</div>
-		<div class="derecha">
-			<a href="#" class="icons-header">
-				<img src="imagenes/Home.svg" alt="Home">
-			</a>
-			<a href="#" class="icons-header">
-				<img src="imagenes/Comida.svg" alt="Comida">
-			</a>
-			<a href="#" class="icons-header">
-				<img src="imagenes/Promos.svg" alt="Promos">
-			</a>
-			<a href="#" class="icons-header">
-				<img src="imagenes/Nosotros.svg" alt="Nosotros">
-			</a>
-		</div>
-	</header>
-	<div class="barra_lateral" id="barra_lateral">
-		<nav>
+
+<header class="header">
+	<div class="container">
+		<div class="logo">Logo</div>
+		<button type="button" class="menu-btn">
+			<span class="line line-1"></span>
+			<span class="line line-2"></span>
+			<span class="line line-3"></span>
+		</button>
+		<nav class="menu">
 			<ul>
-				<li>
-					<a href="#" class="buscar">
-						<img src="imagenes/Buscar.svg" alt="">
-						<span>Buscar</span>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="selected">
-						<img src="imagenes/Home_S.svg" alt="">
-						<span>Inicio</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="imagenes/Comida.svg" alt="">
-						<span>Menú</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="imagenes/Promos.svg" alt="">
-						<span>Promociones</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="imagenes/Nosotros.svg" alt="">
-						<span>Nosotros</span>
-					</a>
-				</li>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Carta</a></li>
+				<li><a href="#">Promociones</a></li>
+				<li><a href="#">Nosotros</a></li>
 			</ul>
 		</nav>
 	</div>
-
-
-	<main id="main">
-		<p>Prueba no sé cual x11</p>
-	</main>
-
-	<script type="text/javascript" src="index_proyecto.js"></script>
+</header>
+<main class="main">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</main>
+<script type="text/javascript" src="index_proyecto.js"></script>
 </body>
 </html>
