@@ -79,7 +79,8 @@ header{
 }
 
 .marca .name{
-	font-size: 1.5rem;
+	/*font-size: 1.5rem;*/
+	font-size: 24px;
 	font-weight: 900;
 	color: #853726;
 }
