@@ -118,7 +118,7 @@ header{
 .barra_lateral{
     margin-top: 3.5rem; /* Aumenta ligeramente este valor */
     width: 4rem;
-    height: calc(100% - 3.5rem); /* Asegura que no se desborde */
+    height: 100vh; /* Asegura que no se desborde */
     position: fixed;
     top: 0;
     left: 0;
