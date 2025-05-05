@@ -2,13 +2,18 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: arial;
 }
 
 body{
-	font-family: arial;
 	background: #FFFFFF;
+	/*Moficiaciones*/
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
 }
 
+ /*Aquí empieza el menu de navegación*/
 .container{
 	max-width: 1170px;
 	margin: auto;
@@ -85,16 +90,71 @@ body{
 	transform: none;
 }
 
-.main{
-	margin-top: 60px;
-}
-
 .menu .selected{
 	background-color: #C7B9A6;
 	border-radius: 4px;
 }
+/*Aquí termina el menú de navegación*/
 
-/*Responsive*/
+
+/*Aquí empieza el main*/
+.main{
+	margin-top: 60px;
+}
+/*Aquí termina el main*/
+
+
+/*Aquí empieza el footer*/
+.footer{
+	position: relative;
+	width: 100%;
+	background-color: #853726;
+	min-height: 100px;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.menu-footer{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	align-items: center;
+	margin: 10px 0;
+	flex-wrap: wrap;
+}
+
+.menu-elem{
+	list-style: none;
+}
+
+.menu-icon{
+	color: #DFD3C3;
+	font-size: 15px;
+	display: inline-block;
+	text-decoration: none;
+	margin: 5px 10px;
+	opacity: 0.5;
+	transition: 0.3s;
+}
+
+.menu-icon:hover{
+	opacity: 1;
+}
+
+.derechos{
+	color: #DFD3C3;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+/*Aquí termina el footer*/
+
+
+/*Aquí empieza la parte responsive*/
 @media(max-width: 991px){
 	.header{
 		padding: 8px 0;
@@ -193,3 +253,4 @@ body{
 		margin-top: 90px;
 	}
 }
+/*Aquí termina la parte responsive*/
