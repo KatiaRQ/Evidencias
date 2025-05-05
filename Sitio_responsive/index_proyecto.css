@@ -6,7 +6,7 @@
 
 body{
 	font-family: arial;
-	background: hsl(60, 2%, 21%);
+	background: #FFFFFF;
 }
 
 .container{
@@ -22,6 +22,7 @@ body{
 	width: 100%;
 	padding: 10px 0;
 	z-index: 10;
+	background-color: #DFD3C3;
 }
 
 .header .container{
@@ -33,8 +34,12 @@ body{
 .header .logo{
 	font-size: 30px;
 	font-weight: 600;
-	color: hsl(0, 0%, 100%);
+	color: #853726;
 	text-transform: capitalize;
+}
+
+.header .logo img{
+	height: 25px;
 }
 
 .header .menu-btn{
@@ -54,7 +59,7 @@ body{
 	display: block;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: hsl(0, 0%, 100%);
+	color: #853726;
 	font-weight: 500;
 	position: relative;
 	transition: color 0.5s;
@@ -67,13 +72,13 @@ body{
 	width: 100%;
 	bottom: 0;
 	left: 0;
-	background-color: hsl(72, 87%, 51%);
+	background-color: #853726;
 	transform: scale(0);
 	transition: 0.5s;
 }
 
 .header .menu a:hover{
-	color: hsl(72, 87%, 51%);
+	color: #853726;
 }
 
 .header .menu a:hover::after{
@@ -84,6 +89,10 @@ body{
 	margin-top: 60px;
 }
 
+.menu .selected{
+	background-color: #C7B9A6;
+	border-radius: 4px;
+}
 
 /*Responsive*/
 @media(max-width: 991px){
@@ -133,7 +142,7 @@ body{
 		left: 100%;
 		top: 0;
 		height: 100%;
-		background-color: hsl(60, 4%, 9%);
+		background-color: #DFD3C3;
 		width: 280px;
 		padding: 62px 0 30px;
 		transition: transform 0.5s;
@@ -151,7 +160,7 @@ body{
 		width: 100%;
 		height: 62px;
 		box-sizing: border-box;
-		border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+		border-bottom: 1px solid #853726;
 	}
 
 	.header .menu > ul{
@@ -176,5 +185,11 @@ body{
 	}
 	.main{
 		margin-top: 60px;
+	}
+}
+
+@media(max-width: 528px){
+	.main{
+		margin-top: 90px;
 	}
 }
