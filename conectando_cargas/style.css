@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#app-container {
+    position: relative; /* Necesario para que el 'absolute' de arriba funcione */
+    width: 100vw;       /* Ancho total de la ventana */
+    height: 100vh;      /* Alto total de la ventana */
+    overflow: hidden;
+}
+
+/* Estilo general para las pantallas de imagen completa (Inicio, Distancia, etc.) */
+.fullscreen-image {
+    width: 100%;
+    height: 100%;
+    /* 'fill' obliga a la imagen a estirarse para tocar los 4 bordes exactos */
+    /* Si prefieres que se recorte un poco pero no se deforme, usa 'cover' */
+    object-fit: fill; 
+}
+
+/* Estilo para la pantalla de preguntas */
+.question-container {
+    width: 100%;
+    height: 100%;
+    
+    /* --- CAMBIO AQUÍ --- */
+    /* Eliminamos las propiedades de imagen y ponemos un color */
+    /*background-color: #34495e;*/
+    background-color: #7490ab; 
+    /* ------------------- */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- NUEVO ESTILO DEL ENUNCIADO (PREGUNTA) --- */
+
+.question-text {
+    /* Fondo casi blanco para máxima legibilidad */
+    background-color: rgba(255, 255, 255, 0.95);
+    
+    /* Barra lateral de color "neón" (Cyan) para destacar */
+    border-left: 10px solid #0061ff;
+    
+    /* Bordes redondeados en el resto de las esquinas */
+    border-radius: 0 15px 15px 0;
+    
+    /* Sombra profunda para que parezca flotar sobre el fondo oscuro */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px; /* Espacio extra antes de las respuestas */
+    position: relative;
+}
+
+/* Estilo para el título (Ej: "Parcial 1 - Problema 1") */
+.question-text h3 {
+    margin-top: 0;
+    color: #2c3e50; /* Gris oscuro azulado */
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espaciado entre letras elegante */
+    font-weight: 800;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el texto del problema */
+.question-text p {
+    color: #1a1a1a; /* Negro suave */
+    font-size: 1.4em; /* Letra GRANDE y clara */
+    line-height: 1.5; /* Buen espaciado entre líneas para leer fórmulas */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- NUEVO ESTILO DE BOTONES DE RESPUESTA --- */
+
+.option-button {
+    width: 100%; /* Asegura que ocupen el ancho disponible */
+    padding: 15px 20px;
+    margin-bottom: 12px; /* Separación entre botones */
+    
+    /* Fondo con degradado moderno (Azul eléctrico a Cian) */
+    background: linear-gradient(135deg, #0061ff 0%, #ff0015 100%);
+    
+    color: white;
+    font-size: 1.1em; /* Texto un poco más grande */
+    font-weight: bold; /* Texto en negrita */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    border: none;
+    border-radius: 12px; /* Bordes más redondeados */
+    
+    /* Sombra suave para dar profundidad */
+    box-shadow: 0 4px 15px rgba(0, 97, 255, 0.4);
+    
+    cursor: pointer;
+    text-align: left; /* Mantiene el texto alineado a la izquierda para lectura fácil */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Suaviza todas las animaciones */
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.option-button:hover {
+    /* El botón sube ligeramente */
+    transform: translateY(-3px) scale(1.01);
+    
+    /* La sombra se hace más intensa y grande (efecto brillo) */
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.6);
+    
+    /* Cambiamos ligeramente el orden del degradado para dar sensación de luz */
+    filter: brightness(1.1);
+}
+
+/* Efecto al hacer clic (Active) */
+.option-button:active {
+    /* El botón se hunde */
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 2px 10px rgba(0, 97, 255, 0.3);
+}
+
+#content-area {
+    position: absolute; /* Clave: lo saca del flujo normal */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Se asegura de estar detrás de los botones de navegación */
+}
+
+/* Estilo para los nuevos botones de navegación (Anterior/Siguiente) */
+.nav-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* Dimensiones fijas para que sea cuadrado */
+    width: 50px;
+    height: 50px;
+    
+    /* Centrar la flecha perfectamente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Importante quitar el padding para que no se deforme */
+    
+    /* Estilo visual */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borde sutil opcional */
+    border-radius: 8px; /* Bordes ligeramente redondeados (o pon 0 para cuadrado perfecto) */
+    font-size: 1.5em; /* Tamaño de la flecha */
+    cursor: pointer;
+    z-index: 100; /* Asegura que estén encima de todo */
+    transition: all 0.3s ease;
+}
+
+/* Ajustes de posición específicos */
+#nav-button-left {
+    left: 20px;
+}
+
+#nav-button-right {
+    right: 20px;
+}
