@@ -45,6 +45,56 @@ body {
     box-sizing: border-box;
 }
 
+/* --- RESPONSIVIDAD (Versión Móvil) --- */
+
+/* Media Query: Reglas que solo aplican a pantallas de tabletas y celulares (menores a 768px) */
+@media screen and (max-width: 768px) {
+
+    /* 1. IMÁGENES: Evitar distorsión en pantallas verticales */
+    .fullscreen-image {
+        /* 'contain' muestra la imagen entera sin recortarla ni deformarla */
+        /* Esto creará bandas negras (letterbox) si la proporción no coincide, 
+           pero es la única forma de NO distorsionar */
+        object-fit: contain;
+        background-color: #000; /* Fondo negro para los espacios vacíos */
+    }
+
+    /* 2. TEXTOS: Reducir tamaños para que quepan mejor */
+    .question-text {
+        padding: 15px; /* Menos relleno */
+        margin-top: 60px; /* Espacio para no chocar con botones de arriba si los hubiera */
+        margin-bottom: 15px;
+        border-left-width: 5px; /* Barra de neón más fina */
+    }
+
+    .question-text p {
+        font-size: 1.1em; /* Letra un poco más pequeña */
+        line-height: 1.4;
+    }
+
+    .question-text h3 {
+        font-size: 0.8em;
+    }
+
+    /* 3. BOTONES DE RESPUESTA */
+    .option-button {
+        padding: 12px 15px; /* Botones más compactos */
+        font-size: 0.95em;
+    }
+
+    /* 4. BOTONES DE NAVEGACIÓN (FLECHAS) */
+    .nav-button {
+        width: 40px; /* Flechas más pequeñas */
+        height: 40px;
+        font-size: 1.2em;
+        background-color: rgba(0, 0, 0, 0.8); /* Más oscuros para verlos mejor */
+    }
+    
+    /* Mover las flechas un poco más a los bordes */
+    #nav-button-left { left: 10px; }
+    #nav-button-right { right: 10px; }
+}
+
 /* --- NUEVO ESTILO DEL ENUNCIADO (PREGUNTA) --- */
 
 .question-text {
