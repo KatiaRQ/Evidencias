@@ -125,7 +125,7 @@ function navigateTo(newState) {
 }
 
 function goNext() {
-    // Si estamos en una pantalla de imagen (inicio, laberinto, distancia)
+    // Si estamos en una pantalla de imagen (inicio, laberinto, distancia, victoria)
     if (currentState.type === 'image') {
         if (currentState.id === 'inicio') {
             navigateTo({ type: 'image', id: 'laberinto', canAdvance: true, canGoBack: true, lastAnswerCorrect: false });
@@ -133,8 +133,14 @@ function goNext() {
             currentQuestionIndex = 0;
             // Las preguntas no se avanzan con este botón, sino con los botones de opción
             navigateTo({ type: 'question', id: 'q' + currentQuestionIndex, canAdvance: false, canGoBack: true, lastAnswerCorrect: false });
+            
+        /* --- CAMBIO AQUÍ: Detectar el final del juego --- */
+        } else if (currentState.id === 'distancia3') {
+            // Si estamos en la distancia 3, el siguiente paso es la Victoria
+            navigateTo({ type: 'image', id: 'victoria', canAdvance: false, canGoBack: true, lastAnswerCorrect: false });
+            
         } else if (currentState.id.startsWith('distancia')) {
-            // Lógica para avanzar al siguiente parcial si ya se completó el anterior
+            // Lógica para avanzar al siguiente parcial (si no es el 3)
             advanceToNextParcial();
         }
     } else if (currentState.type === 'question') {
